@@ -10,7 +10,7 @@ class Robot(object):
 
 	def __init__(self, bearing=NORTH, x=0, y=0):
 		coordinates = (x, y)
-
+		self.bearing = bearing
 	def advance(self):
 		pass
 
