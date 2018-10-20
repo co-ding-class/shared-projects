@@ -1,9 +1,9 @@
 # Globals for the bearings
 # Change the values as you see fit
-EAST = None
-NORTH = None
-WEST = None
-SOUTH = None
+EAST = 1
+NORTH = 0
+WEST = 3
+SOUTH = 2
 """
 
 """
@@ -37,7 +37,9 @@ class Robot(object):
 		self.coordinates = (x, y)
 
 	def turn_left(self):
-		pass
+### I am confused as to how to write certain numbers(I am Tolkien about the numbers at the top.). Write comment down in the next box.		
+###	
+	L = 
 		
 	def turn_right(self):
-		pass
+		
