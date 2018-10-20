@@ -25,7 +25,16 @@ class Robot(object):
 				self.advance()
 				
 	def advance(self):
-		pass
+		x, y = self.coordinates
+		if self.bearing == NORTH: 
+			y += 1
+		elif self.bearing == SOUTH:
+			y -= 1
+		elif self.bearing == EAST:
+			x -= 1
+		elif self.bearing == WEST:
+			x += 1
+		self.coordinates = (x, y)
 
 	def turn_left(self):
 		pass
