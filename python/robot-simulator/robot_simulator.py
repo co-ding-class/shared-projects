@@ -38,8 +38,13 @@ class Robot(object):
 
 	def turn_left(self):
 ### I am confused as to how to write certain numbers(I am Tolkien about the numbers at the top.). Write comment down in the next box.		
-###	
-	L = 
+###	ETHAN: me too. Write comment down in the next box.
+#
+		self.bearing = self.bearing - 1
+		if self.bearing == -1:
+			self.bearing = 3
 		
 	def turn_right(self):
-		
+		self.bearing = self.bearing + 1
+		if self.bearing == 4:
+			self.bearing = 0
