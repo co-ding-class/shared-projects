@@ -37,14 +37,8 @@ class Robot(object):
 		self.coordinates = (x, y)
 
 	def turn_left(self):
-### I am confused as to how to write certain numbers(I am Tolkien about the numbers at the top.). Write comment down in the next box.		
-###	ETHAN: me too. Write comment down in the next box.
-#
-		self.bearing = self.bearing - 1
-		if self.bearing == -1:
-			self.bearing = 3
+		self.bearing = (self.bearing - 1) % 4
 		
 	def turn_right(self):
-		self.bearing = self.bearing + 1
-		if self.bearing == 4:
-			self.bearing = 0
+		self.bearing = (self.bearing + 1) % 4
+		
