@@ -7,3 +7,7 @@ class Node(object):
 class LinkedList(object):
     def __init__(self):
         pass
+
+	def push(self, value):
+		self.value = value
+		node = Node()
