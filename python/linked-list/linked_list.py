@@ -9,5 +9,4 @@ class LinkedList(object):
         pass
 
 	def push(self, value):
-		self.value = value
-		node = Node()
+		self.node = Node(value)
