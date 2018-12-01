@@ -6,7 +6,7 @@ class Node(object):
 
 class LinkedList(object):
     def __init__(self):
-        pass
+		self.tess = None
 
 	def push(self, value):
 		self.node = Node(value)
