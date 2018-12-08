@@ -8,12 +8,19 @@ class LinkedList(object):
 	def __init__(self):
 		self.tess = None
 		self.last = None
-
+		
 	def push(self, value):
 		node = Node(value)
+		node.back = self.last
 		
-		self.last = node 
+	def pop(self):
+		pass
 		
+	def shift(self):
+		pass
+		
+	def unshift(self, value):
+		pass
 		
 		
 		#self.last is the end, self.tess is the front
