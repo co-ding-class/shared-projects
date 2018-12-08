@@ -12,7 +12,7 @@ class LinkedList(object):
 	def push(self, value):
 		node = Node(value)
 		node.back = self.last
-		
+		self.last.next = node
 	def pop(self):
 		pass
 		
