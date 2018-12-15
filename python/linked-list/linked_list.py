@@ -21,7 +21,10 @@ class LinkedList(object):
 		pass
 		
 	def unshift(self, value):
-		pass
+		node = Node(value)
+		node.next = self.tess
+		self.tess.back = node 
+		self.tess = node
 		
 		
 		#self.last is the end, self.tess is the front
