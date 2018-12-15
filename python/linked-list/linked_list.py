@@ -8,15 +8,19 @@ class LinkedList(object):
 	def __init__(self):
 		self.tess = None
 		self.last = None
-		
+
 	def push(self, value):
 		node = Node(value)
 		node.back = self.last
 		self.last.next = node 
 		self.last = node
-	def pop(self):
-		pass
 		
+	def pop(self):
+		self.last = self.last.back
+		destruction = self.last.next
+		self.last.next = None
+		return destruction.value
+	
 	def shift(self):
 		pass
 		
