@@ -6,7 +6,7 @@ class Node(object):
 
 class LinkedList(object):
 	def __init__(self):
-		self.tess = None
+		self.first = None
 		self.last = None
 
 	def push(self, value):
@@ -26,9 +26,13 @@ class LinkedList(object):
 		
 	def unshift(self, value):
 		node = Node(value)
-		node.next = self.tess
-		self.tess.back = node 
-		self.tess = node
+		node.next = self.first
+		if self.first:
+			self.first.back = node
+		else:
+			self.last = node
+		self.first = node
 		
 		
-		#self.last is the end, self.tess is the front
+#self.last is the end, self.first is the front
+"""***** NO SELF.TESS!!!!!!****"""
