@@ -11,18 +11,26 @@ class LinkedList(object):
 
 	def push(self, value):
 		node = Node(value)
-		node.back = self.last
-		self.last.next = node 
-		self.last = node
+		if self.last != None:
+			node.back = self.last
+			self.last.next = node 
+			self.last = node
+		else:
+			self.last = self.first = node
 		
 	def pop(self):
+		destruction = self.last
 		self.last = self.last.back
-		destruction = self.last.next
-		self.last.next = None
+		if self.last != None:
+			self.last.next = None
 		return destruction.value
 	
 	def shift(self):
-		pass
+		destruction = self.first
+		self.first = self.first.next
+		if self.first != None:
+			self.first.back = None
+		return destruction.value
 		
 	def unshift(self, value):
 		node = Node(value)
@@ -35,4 +43,4 @@ class LinkedList(object):
 		
 		
 #self.last is the end, self.first is the front
-"""***** NO SELF.TESS!!!!!!****"""
+"""***** NO SELF.men!!!!!!****"""
