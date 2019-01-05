@@ -17,7 +17,10 @@ class LinkedList(object):
 			self.last = node
 		else:
 			self.last = self.first = node
-		
+
+	def __len__(self):
+		pass
+
 	def pop(self):
 		destruction = self.last
 		self.last = self.last.back
