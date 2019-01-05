@@ -8,6 +8,7 @@ class LinkedList(object):
 	def __init__(self):
 		self.first = None
 		self.last = None
+		self.total = 0
 
 	def push(self, value):
 		node = Node(value)
@@ -19,7 +20,7 @@ class LinkedList(object):
 			self.last = self.first = node
 
 	def __len__(self):
-		pass
+		return self.total
 
 	def pop(self):
 		destruction = self.last
@@ -43,6 +44,7 @@ class LinkedList(object):
 		else:
 			self.last = node
 		self.first = node
+		#have each separate moevment say whether to take away or add from the self.total
 		
 		
 #self.last is the end, self.first is the front
