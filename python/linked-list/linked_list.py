@@ -10,6 +10,9 @@ class LinkedList(object):
 		self.last = None
 		self.total = 0
 
+	def __iter__(self):
+		
+
 	def push(self, value):
 		node = Node(value)
 		if self.last != None:
@@ -18,7 +21,8 @@ class LinkedList(object):
 			self.last = node
 		else:
 			self.last = self.first = node
-
+		self.total += 1 
+	
 	def __len__(self):
 		return self.total
 
@@ -27,13 +31,20 @@ class LinkedList(object):
 		self.last = self.last.back
 		if self.last != None:
 			self.last.next = None
+		if self.total >= 1:
+			self.total -= 1
+		else:
+			return
 		return destruction.value
 	
 	def shift(self):
+		if self.total <= 0:
+			return
 		destruction = self.first
 		self.first = self.first.next
 		if self.first != None:
 			self.first.back = None
+		self.total -= 1
 		return destruction.value
 		
 	def unshift(self, value):
@@ -44,6 +55,9 @@ class LinkedList(object):
 		else:
 			self.last = node
 		self.first = node
+		self.total += 1 
+		
+		
 		#have each separate moevment say whether to take away or add from the self.total
 		
 		
