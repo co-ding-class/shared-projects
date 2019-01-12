@@ -9,8 +9,12 @@ class LinkedList(object):
 		self.first = None
 		self.last = None
 		self.total = 0
+		
 
 	def __iter__(self):
+		return self
+		
+	def __next__(self):
 		
 
 	def push(self, value):
