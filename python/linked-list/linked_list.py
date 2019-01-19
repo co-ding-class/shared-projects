@@ -12,10 +12,13 @@ class LinkedList(object):
 		
 
 	def __iter__(self):
-		return self
-		
-	def __next__(self):
-		
+		next = self.first
+		while next != None:
+			yield next.value
+			next = next.next
+
+	#def __next__(self):
+	#	pass
 
 	def push(self, value):
 		node = Node(value)
@@ -64,6 +67,6 @@ class LinkedList(object):
 		
 		#have each separate moevment say whether to take away or add from the self.total
 		
-		
+#cd Exercism\python\linked_list
 #self.last is the end, self.first is the front
 """***** NO SELF.men!!!!!!****"""
