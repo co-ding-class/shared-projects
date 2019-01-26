@@ -1,8 +1,8 @@
 class TreeNode(object):
-    def __init__(self, data, left, right):
-        self.data = None
-        self.left = None
-        self.right = None
+    def __init__(self, data, left = None, right = None):
+        self.data = data
+        self.left = left
+        self.right = right
 
     def __str__(self):
         fmt = 'TreeNode(data={}, left={}, right={})'
@@ -10,8 +10,10 @@ class TreeNode(object):
 
 
 class BinarySearchTree(object):
-    def __init__(self, tree_data):
-        pass
+    def __init__(self, tree_data): # ['2', '4']
+        #self.root = None
+        for leaf in (tree_data):
+		    pass
 
     def data(self):
         pass
