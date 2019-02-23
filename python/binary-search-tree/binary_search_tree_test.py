@@ -12,18 +12,22 @@ class BinarySearchTreeTest(unittest.TestCase):
         self.assertTreeEqual(BinarySearchTree(['4']).data(), expected)
 
     # Test inserting data at proper node
+    @unittest.skip("not yet")
     def test_smaller_data_at_left_node(self):
         expected = TreeNode('4', TreeNode('2', None, None), None)
         self.assertTreeEqual(BinarySearchTree(['4', '2']).data(), expected)
 
+    @unittest.skip("not yet")
     def test_same_number_at_left_node(self):
         expected = TreeNode('4', TreeNode('4', None, None), None)
         self.assertTreeEqual(BinarySearchTree(['4', '4']).data(), expected)
 
+    @unittest.skip("not yet")
     def test_greater_number_at_right_node(self):
         expected = TreeNode('4', None, TreeNode('5', None, None))
         self.assertTreeEqual(BinarySearchTree(['4', '5']).data(), expected)
 
+    @unittest.skip("not yet")
     def test_can_create_complex_tree(self):
         expected = TreeNode(
             '4',
@@ -44,24 +48,29 @@ class BinarySearchTreeTest(unittest.TestCase):
         )
 
     # Test can sort data
+    @unittest.skip("not yet")
     def test_can_sort_single_number(self):
         self.assertEqual(BinarySearchTree(['2']).sorted_data(), ['2'])
 
+    @unittest.skip("not yet")
     def test_can_sort_if_second_number_is_smaller_than_first(self):
         self.assertEqual(
             BinarySearchTree(['2', '1']).sorted_data(), ['1', '2']
         )
 
+    @unittest.skip("not yet")
     def test_can_sort_if_second_number_is_same_as_first(self):
         self.assertEqual(
             BinarySearchTree(['2', '2']).sorted_data(), ['2', '2']
         )
 
+    @unittest.skip("not yet")
     def test_can_sort_if_second_number_is_greater_than_first(self):
         self.assertEqual(
             BinarySearchTree(['2', '3']).sorted_data(), ['2', '3']
         )
 
+    @unittest.skip("not yet")
     def test_can_sort_complex_tree(self):
         self.assertEqual(
             BinarySearchTree(['2', '1', '3', '6', '7', '5']).sorted_data(),

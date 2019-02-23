@@ -10,13 +10,20 @@ class TreeNode(object):
 
 
 class BinarySearchTree(object):
-    def __init__(self, tree_data): # ['2', '4']
-        #self.root = None
+    def __init__(self, tree_data): # ['4']
+        self.root = None
         for leaf in (tree_data):
-		    pass
+            pass
 
     def data(self):
-        pass
+        return 
 
     def sorted_data(self):
         pass
+		
+	def inorder(self, root, left, right):
+	    if root == None: return
+		
+		
+		
+		
