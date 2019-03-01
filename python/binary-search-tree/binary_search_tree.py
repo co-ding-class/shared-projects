@@ -21,9 +21,12 @@ class BinarySearchTree(object):
     def sorted_data(self):
         pass
 		
-	def inorder(self, root, left, right):
+	def inorder(self, root, left, right):		
 	    if root == None: return
-		
-		
+		def recursive_function(root):
+		    if root.left == None and root.right == None: return
+			recursive_function(root.left)
+			# TODO: process the data
+			recursive_function(root.right)
 		
 		
