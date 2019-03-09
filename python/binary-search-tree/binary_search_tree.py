@@ -8,34 +8,43 @@ class TreeNode(object):
 		fmt = 'TreeNode(data={}, left={}, right={})'
 		return fmt.format(self.data, self.left, self.right)
 
-
 class BinarySearchTree(object):
 	def __init__(self, tree_data):
 		self.root = None
-
-		for leaf in (tree_data):
+		for data in (tree_data):
+			self.add(data)
 	
-	
-	def add(self):
+	def add(self,data):
+		if self.root is None:
+			self.root = TreeNode(data,None, None)
+			return 
 		inserted = False
+		cur_node = self.root
+		
 		while not inserted:
-			if cur_node.left:
-				
-			else:
+			if data <= cur_node.data:
+				if cur_node.left:
+					cur_node = cur_node.left
+				else:
+					cur_node.left = TreeNode(data, None, None)
+					inserted = True
+			elif data > cur_node.data:
+				if cur_node.right:
+					cur_node = cur_node.right
+				else:
+					cur_node.right = TreeNode(data, None, None)
+					inserted = True
 
-		el
-				
 	def data(self):
-		return 
+		return self.root
 
 	def sorted_data(self):
-		pass
+		elements = []
+		self.inorder(self.root, elements)
+		return elements
 		
-	def inorder(self, root, left, right):
-		if root == None: return
-		
-		def recursive_function(root):
-			if root.left == None and root.right == None: return
-			recursive_function(root.left)
-			# TODO: process the data
-			recursive_function(root.right)
+	def inorder(self, node, elements):
+		if node is not None:
+			self.inorder(node.left, elements)
+			elements.append(node.data)
+			self.inorder(node.right, elements)
